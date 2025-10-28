@@ -47,7 +47,7 @@ export default function HeroAI() {
         </div>
 
         {/* Prompt box */}
-        <form onSubmit={onSubmit} className="mt-8 sm:mt-10">
+        <form onSubmit={onSubmit} className="mt-8 sm:mt-10 relative">
           <div className="relative max-w-3xl mx-auto">
             <textarea
               value={prompt}
@@ -62,9 +62,38 @@ export default function HeroAI() {
             >
               <Send className="h-5 w-5" />
             </button>
+
+            {/* Bottom circular glow behind textarea */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute left-1/2 -translate-x-1/2 flex-shrink-0"
+              style={{
+                bottom: "70px", // adjust glow distance from textarea
+                width: "800px",
+                height: "90px",
+                borderRadius: "924px",
+                background: "rgba(239, 116, 20, 0.50)",
+                mixBlendMode: "plus-lighter",
+                filter: "blur(90px)",
+              }}
+            />
           </div>
         </form>
       </div>
+      {/* Bottom circular glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 -translate-x-1/2 flex-shrink-0"
+        style={{
+          bottom: "-1550px", // adjust as needed
+          width: "1483px",
+          height: "1577px",
+          borderRadius: "1577px",
+          background: "rgba(239, 116, 30, 0.50)",
+          mixBlendMode: "plus-lighter",
+          filter: "blur(125px)",
+        }}
+      />
     </section>
   );
 }
