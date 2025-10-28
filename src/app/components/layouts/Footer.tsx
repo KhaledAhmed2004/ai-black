@@ -1,4 +1,3 @@
-// app/components/Footer/Footer.tsx
 import Link from "next/link";
 import {
   FaAppStoreIos,
@@ -17,16 +16,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Brand & Tagline */}
           <div className="flex flex-col gap-4">
+            <p className="text-sm text-gray-400 max-w-xs">
+              Create at the Speed of Thought — empowering students to turn ideas
+              into websites and projects in minutes, no coding required.
+            </p>
             <div className="flex items-center gap-4">
               <FaAppStoreIos className="text-2xl text-gray-500" />
               <FaGooglePlay className="text-2xl text-gray-500" />
               <FaInstagram className="text-2xl text-gray-500" />
               <FaLinkedinIn className="text-2xl text-gray-500" />
             </div>
-            <p className="text-sm text-gray-400 max-w-xs">
-              Driven by the Speed of Thought — empowering students to turn ideas
-              into websites and projects in minutes, no coding required.
-            </p>
           </div>
 
           {/* Navigation Columns */}

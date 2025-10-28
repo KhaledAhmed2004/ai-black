@@ -1,14 +1,12 @@
 import Link from "next/link";
-import Footer from "./components/layouts/Footer";
 import PricingCard from "./components/pricing-card";
 import { FeatureCard } from "@/components/ui/feature-card";
 import FAQSection from "./components/FAQSection";
-import TestimonialCard from "./components/TestimonialCard";
 import AISection from "./components/AISection";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import HeroAI from "./components/HeroAI";
 import VideoSection from "./components/VideoSection";
-import Navbar from "./components/Navbar";
+import CTASection from "./components/CTASection";
 
 export default function Home() {
   const testimonials = [
@@ -82,7 +80,6 @@ export default function Home() {
 
   return (
     <main>
-      <Navbar />
       {/* AI Prompt Hero */}
       <HeroAI />
 
@@ -159,29 +156,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <section className="relative overflow-hidden bg-gradient-to-br from-black via-[#1a0d00] to-black py-24 md:py-32 lg:py-40">
-        {/* Background Glowing Circles */}
-        <div className="absolute top-0 right-0 w-96 h-96 md:w-[500px] md:h-[500px] bg-orange-600/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 md:w-[450px] md:h-[450px] bg-orange-700/10 rounded-full blur-3xl animate-pulse delay-700"></div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            Are You Ready To
-            <br />
-            <span className="text-orange-500">Start To Build?</span>
-          </h1>
-
-          <div className="mt-8 flex justify-center">
-            <Link
-              href="#"
-              className="inline-flex items-center px-8 py-3 text-sm md:text-base font-medium text-white bg-gradient-to-r from-orange-600 to-orange-500 rounded-full shadow-lg hover:from-orange-500 hover:to-orange-400 transform hover:scale-105 transition-all duration-300"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </section>
       <section className="bg-black py-16 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Title */}
@@ -194,7 +169,9 @@ export default function Home() {
         </div>
       </section>
       <FAQSection />
-      <Footer />
+
+      {/* Call to Action */}
+      <CTASection />
     </main>
   );
 }
