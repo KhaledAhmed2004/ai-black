@@ -1,12 +1,14 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
+
 import { Button } from "@/components/ui/button";
+import type { ReactNode } from "react";
 
 interface Plan {
   name: string;
   price: number;
-  icon: string;
+  icon: ReactNode;
   featured: boolean;
   features: string[];
 }
@@ -18,11 +20,21 @@ interface PricingCardProps {
 export default function PricingCard({ plan }: PricingCardProps) {
   return (
     <div
-      className={`relative w-full max-w-sm rounded-2xl border transition-all duration-300 hover:scale-105 ${
+      className={`relative w-[280px] rounded-2xl border transition-all duration-300 hover:scale-105 ${
         plan.featured
-          ? "border-amber-600/50 bg-gradient-to-br from-amber-950/40 to-amber-900/20 shadow-2xl shadow-amber-900/20 lg:scale-105"
+          ? "border-orange-500/30 shadow-2xl shadow-orange-500/20 lg:scale-105"
           : "border-gray-700/50 bg-gray-900/40 hover:border-gray-600/50"
       }`}
+      style={
+        plan.featured
+          ? {
+              backgroundImage: "url(/images/BG-Pricing.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }
+          : {}
+      }
     >
       {/* Card Content */}
       <div className="flex flex-col h-full p-6 sm:p-8">
@@ -52,8 +64,8 @@ export default function PricingCard({ plan }: PricingCardProps) {
         <div className="flex-1 space-y-4 mb-8">
           {plan.features.map((feature, index) => (
             <div key={index} className="flex items-start gap-3">
-              <Check
-                className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+              <IoCheckmarkCircleOutline
+                className={`w-5 h-5 shrink-0 mt-0.5 ${
                   plan.featured ? "text-white" : "text-orange-500"
                 }`}
               />
@@ -69,7 +81,7 @@ export default function PricingCard({ plan }: PricingCardProps) {
           className={`w-full py-2.5 sm:py-3 rounded-full font-semibold transition-all duration-300 ${
             plan.featured
               ? "bg-white text-black hover:bg-gray-100"
-              : "border border-gray-600 text-white hover:border-gray-500 hover:bg-gray-800/50"
+              : "bg-transparent border border-gray-500/50 text-gray-300 hover:border-orange-500/70 hover:bg-orange-500/10 hover:text-white"
           }`}
           variant={plan.featured ? "default" : "outline"}
         >

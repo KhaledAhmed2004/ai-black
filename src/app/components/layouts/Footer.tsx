@@ -111,7 +111,7 @@ export default function Footer() {
               </h4>
               <div className="space-y-3 text-sm text-gray-400">
                 <div className="flex items-items-start gap-3">
-                  <FaMapMarkerAlt className="text-gray-500 mt-0.5 flex-shrink-0" />
+                  <FaMapMarkerAlt className="text-gray-500 mt-0.5 shrink-0" />
                   <span>
                     123 Business Street, Suite 100
                     <br />

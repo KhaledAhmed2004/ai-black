@@ -7,6 +7,7 @@ import TestimonialCarousel from "./components/TestimonialCarousel";
 import HeroAI from "./components/HeroAI";
 import VideoSection from "./components/VideoSection";
 import CTASection from "./components/CTASection";
+import { Layers } from "lucide-react";
 
 export default function Home() {
   const testimonials = [
@@ -43,7 +44,7 @@ export default function Home() {
     {
       name: "General",
       price: 24.99,
-      icon: "⚡",
+      icon: <Layers className="w-6 h-6" />,
       featured: false,
       features: [
         "Yearly subscriptions",
@@ -55,7 +56,7 @@ export default function Home() {
     {
       name: "Premium",
       price: 14.99,
-      icon: "✨",
+      icon: <Layers className="w-6 h-6" />,
       featured: true,
       features: [
         "Yearly subscriptions",
@@ -67,7 +68,7 @@ export default function Home() {
     {
       name: "Extra",
       price: 24.99,
-      icon: "⚡",
+      icon: <Layers className="w-6 h-6" />,
       featured: false,
       features: [
         "Yearly subscriptions",
