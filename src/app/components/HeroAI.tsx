@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Send, WandSparkles } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function HeroAI() {
   const [prompt, setPrompt] = useState("");
@@ -178,8 +179,8 @@ export default function HeroAI() {
           </div>
         </form>
       </div>
-      {/* Bottom circular glow */}
-      <div
+      {/* Bottom circular glow (fade-in) */}
+      <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 -translate-x-1/2 shrink-0"
         style={{
@@ -191,6 +192,9 @@ export default function HeroAI() {
           mixBlendMode: "plus-lighter",
           filter: "blur(125px)",
         }}
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.9 }}
       />
     </section>
   );
