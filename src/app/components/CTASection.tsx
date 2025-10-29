@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const CTASection = () => {
   return (
@@ -7,8 +9,8 @@ const CTASection = () => {
       <div className="absolute top-0 -right-48 w-96 h-96 md:w-[500px] md:h-[500px] bg-orange-600/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute -bottom-40 -left-40 w-80 h-80 md:w-[450px] md:h-[450px] bg-orange-700/10 rounded-full blur-3xl animate-pulse delay-700"></div>
 
-      {/* Top-Right Decorative Circle (Visible, Clipped Properly) */}
-      <div
+      {/* Top-Right Decorative Circle (animated from top to bottom) */}
+      <motion.div
         className="absolute -top-[130px] -right-40 w-[376px] h-[376px] rounded-full"
         style={{
           background:
@@ -21,10 +23,14 @@ const CTASection = () => {
           `,
           flexShrink: 0,
         }}
-      ></div>
+        initial={{ opacity: 0, y: -60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.8 }}
+      />
 
-      {/* Bottom-Left Decorative Circle */}
-      <div
+      {/* Bottom-Left Decorative Circle (animated) */}
+      <motion.div
         className="absolute -bottom-[150px] -left-[150px] rounded-[502px]"
         style={{
           width: "502px",
@@ -35,7 +41,11 @@ const CTASection = () => {
             "1px 2px 4px 0 rgba(239, 116, 30, 0.60) inset, 0 4px 4px 0 #EF741E",
           flexShrink: 0,
         }}
-      ></div>
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.8 }}
+      />
 
       {/* Middle Glowing Decorative Circle */}
       <div
