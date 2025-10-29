@@ -39,6 +39,34 @@ export default function Home() {
       name: "Mendela",
       imageSrc: "/images/four.png",
     },
+    {
+      rating: 4.9,
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      name: "Mendela",
+      imageSrc: "/images/four.png",
+    },
+    {
+      rating: 4.9,
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      name: "Mendela",
+      imageSrc: "/images/four.png",
+    },
+    {
+      rating: 4.9,
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      name: "Mendela",
+      imageSrc: "/images/four.png",
+    },
+    {
+      rating: 4.9,
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      name: "Mendela",
+      imageSrc: "/images/four.png",
+    },
   ];
   const plans = [
     {
